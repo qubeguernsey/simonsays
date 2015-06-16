@@ -1,0 +1,299 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  &.home {
+    input[type="submit"] {
+      @include button-variant(white, $green, darken($green, 5%));
+    }
+
+    background-color: $green;
+    color: $warm-gray;
+
+    h1 {
+      color: $green;
+    }
+
+    footer {
+      border-bottom-color: $green;
+    }
+  }
+
+  padding-top: $padding-large-vertical * 10;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  margin-bottom: $line-height-computed;
+}
+
+header {
+  nav {
+    @extend .navbar;
+    @extend .navbar-default;
+    @extend .navbar-fixed-top;
+
+    border-bottom: none;
+    background-image: url(/images/cardboard-bg.jpg);
+    font-size: $font-size-large;
+    font-weight: 600;
+
+    .navbar-nav {
+      display: table;
+      width: 100%;
+
+      li {
+        display: table-cell;
+        width: 20%;
+        float: none;
+      }
+
+      a {
+        text-align: center;
+
+        &:before {
+          content: "//";
+        }
+
+        &.home:before, &.blog:before {
+          color: $green;
+        }
+
+        &.about:before, &.contact:before {
+          color: $pink;
+        }
+
+        &.menus:before {
+          color: $purple;
+        }
+
+        &.deals:before {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-image: url(/images/cardboard-bg.jpg);
+  border-bottom: 5px solid;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.content {
+  background-color: white;
+  padding-bottom: $line-height-computed;
+}
+
+.branding {
+  color: white;
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.tagline {
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: $font-size-h2;
+  margin: $padding-large-vertical * 1.5 0;
+  display: block;
+
+  span:after {
+    content: "//"
+  }
+}
+
+.sign {
+  @extend .text-center;
+  color: white;
+  border: 5px solid white;
+  line-height: $line-height-base * 0.8;
+}
+
+.telephone {
+  @extend .visible-md;
+  @extend .visible-lg;
+
+  background-image: url('/images/man-hanging.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.telephone-number {
+  @extend .sign;
+  @include rotate(-12deg);
+  font-weight: 600;
+  font-size: $font-size-small;
+  width: 90px;
+  margin-top: 40px;
+  padding: 8px;
+
+  .number {
+    display: block;
+    font-size: $font-size-h4;
+    color: white;
+  }
+}
+
+.opening {
+  background-image: url('/images/man-tower.svg');
+  background-repeat: no-repeat;
+  background-size: 320px;
+  background-position: bottom;
+  height: 290px;
+}
+
+.opening-times {
+  @extend .text-center;
+  @extend .sign;
+  @include rotate(5deg);
+
+  padding-top: $padding-large-vertical;
+  padding-bottom: $padding-large-vertical;
+  width: 190px;
+  font-size: $font-size-large * 1.1;
+  margin: 30px auto 0 auto;
+  position: relative;
+  left: 30px;
+
+  .times, .days {
+    display: block;
+    font-weight: 600;
+  }
+
+  .times {
+    font-size: $font-size-h2;
+  }
+
+  .days {
+    font-size: $font-size-h3;
+  }
+}
+
+.mailing-list {
+  @extend .form-inline;
+  padding-bottom: $line-height-computed;
+
+  input[type="submit"] {
+    @extend .btn;
+  }
+}
+
+.contact-details {
+  font-size: $font-size-large;
+  padding-top: $line-height-computed;
+
+  .detail {
+    color: $warm-gray;
+    margin-bottom: $padding-large-vertical + $padding-small-vertical;
+    display: inline-block;
+    padding-right: $padding-large-horizontal;
+  }
+
+  .detail:before {
+    content: "//";
+    color: $pink;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $navbar-default-link-hover-color;
+  }
+
+  img {
+    height: $line-height-computed * 2;
+    margin-top: -$line-height-computed / 2;
+    margin-right: -$line-height-computed / 2;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .content {
+    border-radius: 25px;
+    margin-left: $padding-small-horizontal * 0.5;
+    margin-right: $padding-small-horizontal * 0.5;
+  }
+
+  .opening {
+    background-size: 460px;
+    height: 370px;
+  }
+
+  .opening-times {
+    left: 0;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .main {
+    padding-left: 50px;
+  }
+
+  .tagline {
+    font-size: $font-size-h3 * 0.85;
+  }
+
+  .content {
+    margin: 0;
+    padding-left: 20px;
+    background-image: url(/images/tear.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size:cover;
+    background-color: transparent;
+    border-radius: 0;
+    min-height: 500px;
+  }
+
+  .opening {
+    height: 280px;
+    background-size: contain;
+  }
+
+  .opening-times {
+    margin-top: 28px;
+    left: 40px;
+  }
+
+  .telephone {
+    margin-top: -90px;
+  }
+
+  .telephone-number {
+    margin-left: -28px;
+  }
+
+  .bottom {
+    margin-top: -280px;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .opening-times {
+    margin-top: 0;
+    left: 30px;
+  }
+
+  .tagline {
+    font-size: $font-size-h3;
+  }
+
+  .telephone {
+    margin-top: -70px;
+  }
+
+  .telephone-number {
+    margin-left: -5px;
+  }
+}

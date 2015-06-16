@@ -1,0 +1,37 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Exo+2:200,300,400,600,700);
+
+// Typography
+$font-family-base: 'Exo 2', sans-serif;
+$font-size-base: 16px;
+$font-size-large: 18px;
+
+$font-size-h1: 80px;
+$font-size-h2: 32px;
+$font-size-h3: 24px;
+$headings-font-weight: 300;
+
+// Colours
+$green: rgb(119,184,42);
+$pink: rgb(230,27,117);
+$purple: rgb(131,64,143);
+$orange: rgb(239,117,32);
+$warm-gray: rgb(98,76,62);
+
+$gray-base: $warm-gray;
+
+$navbar-default-link-color: $warm-gray;
+$navbar-padding-horizontal: 100px;
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+  "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap",
+  "../bower_components/animate.css/animate.css",
+  "base",
+  "layout"
+;

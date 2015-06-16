@@ -1,0 +1,19 @@
+{
+  "name": "Simon Says",
+  "version": "0.0.0",
+  "authors": [
+    "Tim Wardle <t.m.wardle@gmail.com>"
+  ],
+  "description": "Simon Says website",
+  "homepage": "http://simonsays.gg",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.4",
+    "animate.css": "~3.3.0"
+  }
+}
