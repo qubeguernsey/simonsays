@@ -1,0 +1,16 @@
+@mixin colorify($color) {
+  input[type="submit"] {
+    @include button-variant(white, $color, darken($color, 5%));
+  }
+
+  background-color: $color;
+  color: $warm-gray;
+
+  h1 {
+    color: $color;
+  }
+
+  footer {
+    border-bottom-color: $color;
+  }
+}

@@ -29,9 +29,9 @@
 
         <div class="col-lg-5 col-md-6 contact-details">
           <span class="detail">{{ site.address }}</span><br>
-          <a href="tel:01481740603" class="detail">{{ site.telephone }}</a>
+          {% if site.telephone %}<a href="tel:01481740603" class="detail">{{ site.telephone }}</a>{% endif %}
           <a href="mailto:info@champagne.gg" class="detail">{{ site.email }}</a>
-          <a href="http://www.facebook.com/{{ site.facebook_username }}" title="Facebook"><img src="/images/facebook.png"</a>
+          <a href="http://www.facebook.com/{{ site.facebook_username }}" title="Facebook"><img src="/images/facebook.png"></a>
           <a href="http://www.twitter.com/{{ site.twitter_username }}" title="Twitter"><img src="/images/twitter.png"></a>
         </div>
       </div>

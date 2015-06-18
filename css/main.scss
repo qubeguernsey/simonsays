@@ -23,15 +23,22 @@ $orange: rgb(239,117,32);
 $warm-gray: rgb(98,76,62);
 
 $gray-base: $warm-gray;
+$gray-light: lighten($warm-gray, 30%);
+
+$home-color: $green;
+$smoothies-color: $pink;
+$menus-color: $purple;
+$contact-color: $orange;
 
 $navbar-default-link-color: $warm-gray;
-$navbar-padding-horizontal: 100px;
+$navbar-default-border: $warm-gray;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap",
   "../bower_components/animate.css/animate.css",
+  "mixins",
   "base",
   "layout"
 ;
