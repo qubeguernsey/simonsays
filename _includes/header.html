@@ -14,10 +14,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse col-md-9 col-md-offset-3" id="menu-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/" class="home">Home</a></li>
-            <li><a href="/smoothies" class="smoothies">Smoothies</a></li>
-            <li><a href="/menus" class="menus">Menus</a></li>
-            <li><a href="/contact" class="contact">Contact</a></li>
+            <li><a href="{{ '/' | prepend: site.baseurl }}" class="home">Home</a></li>
+            <li><a href="{{ '/smoothies' | prepend: site.baseurl }}" class="smoothies">Smoothies</a></li>
+            <li><a href="{{ '/menus' | prepend: site.baseurl }}" class="menus">Menus</a></li>
+            <li><a href="{{ '/contact' | prepend: site.baseurl }}" class="contact">Contact</a></li>
           </ul>
         </div>
       </div>

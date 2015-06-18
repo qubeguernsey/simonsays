@@ -55,7 +55,7 @@ permalink: /contact/
     {% endif %}
 
     <h3>Social</h3>
-    <a href="http://www.facebook.com/{{ site.facebook_username }}" title="Facebook"><img class="icon" src="/images/facebook.png"></a>
-    <a href="http://www.twitter.com/{{ site.twitter_username }}" title="Twitter"><img class="icon" src="/images/twitter.png"></a>
+    <a href="http://www.facebook.com/{{ site.facebook_username }}" title="Facebook"><img class="icon" src="{{ '/images/facebook.png' | prepend: site.baseurl }}"></a>
+    <a href="http://www.twitter.com/{{ site.twitter_username }}" title="Twitter"><img class="icon" src="{{ '/images/twitter.png' | prepend: site.baseurl }}"></a>
   </div>
 </div>

@@ -30,7 +30,7 @@ header {
     @extend .navbar-fixed-top;
 
     border-bottom: none;
-    background-image: url(/images/cardboard-bg.jpg);
+    background-image: url(#{$baseurl}/images/cardboard-bg.jpg);
     font-size: $font-size-large;
     font-weight: 600;
 
@@ -69,7 +69,7 @@ header {
 }
 
 footer {
-  background-image: url(/images/cardboard-bg.jpg);
+  background-image: url(#{$baseurl}/images/cardboard-bg.jpg);
   border-bottom: 5px solid;
 }
 
@@ -147,7 +147,7 @@ strong {
   @extend .visible-md;
   @extend .visible-lg;
 
-  background-image: url(/images/man-hanging.svg);
+  background-image: url(#{$baseurl}/images/man-hanging.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
@@ -172,7 +172,7 @@ strong {
 }
 
 .opening {
-  background-image: url(/images/man-tower.svg);
+  background-image: url(#{$baseurl}/images/man-tower.svg);
   background-repeat: no-repeat;
   background-size: 320px;
   background-position: bottom;
@@ -295,7 +295,7 @@ strong {
 
   .bg {
     flex: 1 0 auto;
-    background-image: url(/images/tear.svg);
+    background-image: url(#{$baseurl}/images/tear.svg);
     background-repeat: no-repeat;
     background-position: 95% 0;
     background-size: 70%;
