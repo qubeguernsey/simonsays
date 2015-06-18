@@ -11,9 +11,9 @@
       <div class="row">
         <div class="col-md-3 branding">
           {% if page.logo == 'light' %}
-            <img src="/images/logo-white.svg" alt="{{ site.title }}" class="img-responsive">
+            <img src="{{ '/images/logo-white.svg' | prepend: site.baseurl }}" alt="{{ site.title }}" class="img-responsive">
           {% else %}
-            <img src="/images/logo.svg" alt="{{ site.title }}" class="img-responsive">
+            <img src="{{ '/images/logo.svg' | prepend: site.baseurl }}" alt="{{ site.title }}" class="img-responsive">
           {% endif %}
           <span class="tagline"><span>Fresh</span><span>Food</span><strong>Faster</strong></span>
         </div>
